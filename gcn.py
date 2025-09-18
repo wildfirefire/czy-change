@@ -206,7 +206,7 @@ class GCNAbsaModel(nn.Module):
         #多层次融合
         # outputs = self.fusion_layer(h_sy_mean, h_se_mean, h_sen_mean)
         # outputs = self.fusion1(h_sy_mean, h_se_mean, h_sen_mean)  # 门控融合
-        # outputs = F.relu(h_sen_mean)
+        outputs = F.relu(outputs)
         h_csy=''
         h_cse=''
         return outputs, h_sy, h_se, h_csy, h_cse
